@@ -46,9 +46,9 @@ export const CardsCollection: FC<CardsCollectionProps> = ({ cards }) => {
 					<option value='grid'>Grid</option>
 				</select>
 			</div>
-			<div className='cards__container'>
-				{celebs.map((card, index) => (
-					<Card onSubmit={handleSubmit} key={card._id} {...card} view={view} />
+			<div data-testid='collection_container' className='cards__container'>
+				{celebs.map((celeb, index) => (
+					<Card {...celeb} onSubmit={handleSubmit} key={celeb._id} view={view} />
 				))}
 			</div>
 		</section>
