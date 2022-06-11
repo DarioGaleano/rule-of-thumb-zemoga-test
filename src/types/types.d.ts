@@ -11,3 +11,7 @@ export interface Data {
 		negative: number;
 	};
 }
+
+export interface Celebs extends Data {
+	_id: ObjectId;
+}
