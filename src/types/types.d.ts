@@ -17,6 +17,7 @@ export interface Celebs extends Data {
 }
 
 export interface Thumbs {
+	id?: string;
 	withBg?: boolean;
 	onClick?: (type: 'positive' | 'negative') => void;
 	type: 'positive' | 'negative';
@@ -28,12 +29,20 @@ export interface ThumbsIconProps {
 	type?: 'positive' | 'negative';
 }
 
+export interface CardWithId extends Card {
+	_id: string;
+	votes: {
+		positive: number;
+		negative: number;
+	};
+}
+
 export interface HomeProps {
-	celebs: CardWithId[];
+	celebs: Celebs[];
 }
 
 export interface CardsCollectionProps {
-	cards: CardWithId[];
+	cards: Celebs[];
 }
 
 export interface CardProps extends Data {
