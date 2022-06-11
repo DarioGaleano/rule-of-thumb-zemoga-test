@@ -10,7 +10,7 @@ export const NavBar = () => {
 						<path d='M0 0h25v4H0V0zm0 8h25v4H0V8zm0 8h25v4H0v-4z' fill='#FFF' fillRule='nonzero' />
 					</svg>
 				</button>
-				<ul className='nav__links'>
+				<ul role={'list'} className='nav__links'>
 					<li>
 						<a href='#'>Past Trials</a>
 					</li>
