@@ -27,3 +27,17 @@ export interface ThumbsIconProps {
 	withBg?: boolean;
 	type?: 'positive' | 'negative';
 }
+
+export interface HomeProps {
+	celebs: CardWithId[];
+}
+
+export interface CardsCollectionProps {
+	cards: CardWithId[];
+}
+
+export interface CardProps extends Data {
+	view: 'list' | 'grid';
+	_id: string;
+	onSubmit: (_id: string, votes: { positive: number; negative: number }, type: string) => void;
+}
