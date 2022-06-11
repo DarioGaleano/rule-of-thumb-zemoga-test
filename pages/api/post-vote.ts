@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { celebServices } from '../../src/api/use-cases';
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+export default async function postVote(req: NextApiRequest, res: NextApiResponse) {
 	if (req.method !== 'POST') {
 		return res.send({
 			message: 'method no allow',
@@ -17,4 +17,4 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 			});
 		}
 	}
-};
+}
