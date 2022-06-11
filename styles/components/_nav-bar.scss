@@ -12,7 +12,7 @@
 
 .nav__logo {
 	margin: 2.5rem 0 0;
-	color: ($white);
+	color: $white;
 	font-size: 2rem;
 	font-weight: 400;
 	line-height: 2.5rem;
@@ -36,7 +36,7 @@
 	height: calc(100vh - 4rem);
 	flex-direction: column;
 	padding: 4rem 0 2rem;
-	background-color: ($darker-background);
+	background-color: $darker-background;
 	transform: translateX(100vw);
 }
 
@@ -48,7 +48,7 @@
 }
 
 .nav__links a {
-	color: ($white);
+	color: $white;
 	text-decoration: none;
 }
 
@@ -70,10 +70,10 @@
 .nav__search-input {
 	width: 25vw;
 	border: 0;
-	border-bottom: 2px solid ($white);
+	border-bottom: 2px solid $white;
 	background-color: transparent;
 	border-radius: 0;
-	color: ($white);
+	color: $white;
 	font-family: 'Lato', sans-serif;
 	font-size: 1.5rem;
 	transition: width 0.2s ease-in;

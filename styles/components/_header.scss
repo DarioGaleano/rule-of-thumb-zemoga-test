@@ -181,6 +181,28 @@
 }
 
 @media all and (min-width: $breakpoint-desktop) {
+	.closing-gauge__left {
+		padding-right: 1rem;
+	}
+
+	.closing-gauge__right {
+		padding-left: 1rem;
+	}
+
+	.closing-gauge__title {
+		font-size: 1.25rem;
+	}
+
+	.closing-gauge__number,
+	.closing-gauge__desc {
+		font-size: 2rem;
+	}
+
+	.closing-gauge__left:after {
+		border-top-width: 0.33rem;
+		border-bottom-width: 0.33rem;
+	}
+
 	.hero {
 		min-height: 700px;
 	}
@@ -205,27 +227,6 @@
 			calc(-50vw + 650px) -6rem/105vw auto no-repeat url(/assets/img/pope-francis.png);
 	}
 
-	.closing-gauge__left {
-		padding-right: 1rem;
-	}
-
-	.closing-gauge__right {
-		padding-left: 1rem;
-	}
-
-	.closing-gauge__title {
-		font-size: 1.25rem;
-	}
-
-	.closing-gauge__number,
-	.closing-gauge__desc {
-		font-size: 2rem;
-	}
-
-	.closing-gauge__left:after {
-		border-top-width: 0.33rem;
-		border-bottom-width: 0.33rem;
-	}
 	.featured-card__content {
 		padding: 2rem 1.5rem;
 	}
