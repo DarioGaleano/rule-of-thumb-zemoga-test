@@ -56,29 +56,34 @@ export const Card: FC<CardProps> = ({
 	return (
 		<article className={`card__view-${view}`}>
 			<div className={`card__container-${view}`}>
-				<ThumbsButton withBg type='positive' onClick={onVote} selected={voteType === 'positive'} />
-				<ThumbsButton withBg type='negative' onClick={onVote} selected={voteType === 'negative'} />
+				<ThumbsButton id={'1'} withBg type='positive' onClick={onVote} selected={voteType === 'positive'} />
+				<ThumbsButton id={'2'} withBg type='negative' onClick={onVote} selected={voteType === 'negative'} />
 
 				{percentageP > percentageN ? <ThumbsIcon type='positive' withBg /> : <ThumbsIcon type='negative' withBg />}
-				<img src={`../../assets/img/${getImage()}`} />
+				<img src={`../../assets/img/${getImage()}`} alt={name} />
 				<h1>{name}</h1>
 				<span>{description}</span>
-				<span>
+				<span data-testid='about_element'>
 					{voted
 						? 'Thank you for your vote!'
 						: `about ${differenceInCalendarYears(new Date(), new Date(lastUpdated))} year ago in ${
 								category.charAt(0).toUpperCase() + category.slice(1)
 						  }`}
 				</span>
-				<button onClick={voted ? handleReset : handleSubmit} disabled={voteType === null} className='card__vote_now'>
+				<button
+					data-testid='vote_element'
+					onClick={voted ? handleReset : handleSubmit}
+					disabled={voteType === null}
+					className='card__vote_now'
+				>
 					{voted ? 'Vote Again' : 'Vote Now'}
 				</button>
 				<div className='card__status-bar'>
-					<div className='card__status-positive' style={{ width: `${percentageP}%` }}>
+					<div data-testid='positive_element' className='card__status-positive' style={{ width: `${percentageP}%` }}>
 						<ThumbsIcon type='positive' />
 						<span>{percentageP}%</span>
 					</div>
-					<div className='card__status-negative' style={{ width: `${percentageN}%` }}>
+					<div data-testid='negative_element' className='card__status-negative' style={{ width: `${percentageN}%` }}>
 						<span>{percentageN}%</span>
 						<ThumbsIcon type='negative' />
 					</div>
