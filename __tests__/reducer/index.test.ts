@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
-import { celebsReducer } from '../../reducer/index';
-import { actions } from '../../config/actions';
-import { celebsExample } from '../../fixtures/celebs-example';
+import { celebsReducer } from '../../src/reducer/index';
+import { actions } from '../../src/config/actions';
+import { celebsExample } from '../../src/fixtures/celebs-example';
 
 describe('Tests on reducer', () => {
 	test('should return an array of celebs', () => {

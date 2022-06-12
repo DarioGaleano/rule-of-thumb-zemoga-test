@@ -26,7 +26,7 @@ export interface Thumbs {
 
 export interface ThumbsIconProps {
 	withBg?: boolean;
-	type?: 'positive' | 'negative';
+	type: 'positive' | 'negative';
 }
 
 export interface CardWithId extends Card {
