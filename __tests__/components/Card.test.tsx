@@ -4,11 +4,11 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { cardInfo } from '../../src/fixtures/card-example';
 
-describe('Tests con <Card />', () => {
+describe('Tests on <Card />', () => {
 	test('should add border to thumbs button, enable Vote Now button', async () => {
 		const user = userEvent.setup();
-		const wrapper = render(<Card {...cardInfo} />);
-		expect(wrapper).toMatchSnapshot();
+		const { container } = render(<Card {...cardInfo} />);
+		expect(container).toMatchSnapshot();
 		expect(screen.getByTestId('vote_element')).toBeDisabled();
 		expect(screen.getByTestId('custom-element1')).not.toHaveClass('card__border');
 		await user.click(screen.getByTestId('custom-element1'));
