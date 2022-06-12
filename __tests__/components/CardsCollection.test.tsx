@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
-import { CardsCollection } from '../../components/CardsCollection';
+import { CardsCollection } from '../../src/components/CardsCollection';
 import { render, screen } from '@testing-library/react';
-import { celebsExample } from '../../fixtures/celebs-example';
+import { celebsExample } from '../../src/fixtures/celebs-example';
 
 describe('Tests on <CardCollections />', () => {
 	test('should show correctly', async () => {

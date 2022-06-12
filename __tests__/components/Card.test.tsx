@@ -1,8 +1,8 @@
 import '@testing-library/jest-dom';
-import { Card } from '../../components/Card';
+import { Card } from '../../src/components/Card';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { cardInfo } from '../../fixtures/card-example';
+import { cardInfo } from '../../src/fixtures/card-example';
 
 describe('Tests con <Card />', () => {
 	test('should add border to thumbs button, enable Vote Now button', async () => {
