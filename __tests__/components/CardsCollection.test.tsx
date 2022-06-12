@@ -5,8 +5,8 @@ import { celebsExample } from '../../src/fixtures/celebs-example';
 
 describe('Tests on <CardCollections />', () => {
 	test('should show correctly', async () => {
-		const wrapper = render(<CardsCollection cards={celebsExample} />);
-		expect(wrapper).toMatchSnapshot();
+		const { container } = render(<CardsCollection cards={celebsExample} />);
+		expect(container).toMatchSnapshot();
 	});
 
 	test('should have all items', async () => {
